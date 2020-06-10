@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
                         textInputEditText.setHint("Введите количество долларов")
                     }
                     2L -> {
-                        left_course = 80.0
+                        left_course = 80.53
                         textInputEditText.setHint("Введите количество евро")
                     }
                     3L -> {
