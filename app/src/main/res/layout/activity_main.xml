@@ -8,79 +8,79 @@
 
     <TextView
         android:id="@+id/tw"
-        android:layout_width="223dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="31dp"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
         android:text="Конвертер Валют"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="36sp"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText"
-        android:layout_width="348dp"
+        android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="34dp"
         android:layout_marginBottom="54dp"
         android:hint="Введите количество рублей"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342" />
+        app:layout_constraintVertical_bias="0.355" />
+
+    <Spinner
+        android:id="@+id/currency"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.700"
+        app:layout_constraintStart_toEndOf="@+id/currency2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.60" />
+
+    <Spinner
+        android:id="@+id/currency2"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.110"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.60" />
 
     <Button
         android:id="@+id/convert"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="167dp"
-        android:layout_height="77dp"
-        android:layout_marginEnd="18dp"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
         android:text="Конвертировать!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHorizontal_bias="0.540"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText"
+        app:layout_constraintVertical_bias="0.50" />
 
-    <EditText
+    <TextView
         android:id="@+id/dollars"
-        android:layout_width="219dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="108dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
+        android:layout_width="185dp"
+        android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Spinner
-        android:id="@+id/currency"
-        android:layout_width="136dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toEndOf="@+id/convert"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543" />
-
-    <ImageButton
-        android:id="@+id/refresh"
-        android:layout_width="58dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="41dp"
-        app:layout_constraintBottom_toTopOf="@+id/dollars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/stat_notify_sync_noanim" />
+        app:layout_constraintTop_toBottomOf="@+id/convert" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
